@@ -1,0 +1,67 @@
+concat((concat('000',`Tag`.`accid`),3),'-',(concat('000',`Tag`.`Tag_ID`),3)) AS `TagNum`
+
+concat(`Tag`.`accid`,'-',`Tag`.`Tag_ID`) AS `TagNum`
+
+concat(lpad(`Tag`.`accid`,'3','0'),'-',lpad(`Tag`.`Tag_ID`,'3','0') AS `TagNum`
+INC0118218
+
+Agrofresh move to wave4
+note to Jason about GenPC
+
+red tags have different inc
+green have different inc
+agency have different inc
+
+CREATE VIEW `AllTagInfo` AS select 
+`Tag`.`Tag` AS `Tag`,
+`Clients`.`First_Name` AS `First_Name`,
+`Clients`.`Middle_Name` AS `Middle_Name`,
+`Clients`.`Last_Name` AS `Last_Name`,
+`Clients`.`Suffix_Name` AS `Suffix_Name`,
+`Clients`.`Gender` AS `Gender`,
+`Clients`.`DOB` AS `DOB`,
+`Clients`.`Phone_Number` AS `Phone_Number`,
+`Clients`.`Alt_Phone` AS `Alt_Phone`,
+`Clients`.`Address` AS `Address`,
+`Clients`.`Zip` AS `Zip`,
+`Clients`.`Township` AS `Township`,
+`Requests`.`Gift_Name` AS `Gift_Name`,
+`Requests`.`Price` AS `Price`,
+`Requests`.`Gift_Value` AS `Gift_Value`,
+`Requests`.`Category` AS `Category`,
+`Requests`.`Gift_Description` AS `Gift_Description`,
+`Requests`.`Entry_Date` AS `Entry_Date`,
+`Account`.`agcode` AS `Agency_Code`,
+`Tag`.`closed` AS `Closed`,
+`Tag`.`elftag` AS `elftag`,
+`Tag`.`elfplus` AS `elfplus`,
+`Tag`.`checkedin` AS `checkedin`,
+`Tag`.`delivered` AS `delivered`,
+`Tag`.`Tag_ID` 
+`Agency`.`agname`
+FROM `Tag`
+JOIN `Requests` ON `Tag`.`Tag_ID` = `Requests`.`Tag_ID`
+LEFT JOIN `Account` ON `Tag`.`accid` = `Account`.`accid`
+LEFT JOIN `Clients` ON `Requests`.`Client_ID` = `Clients`.`Client_ID`
+LEFT JOIN `Agency` ON `Account`.`agcode`=`Agency`.`agcode`
+
+from (((`Tag` join `Requests` on((`Tag`.`Tag_ID` = `Requests`.`Tag_ID`))) join `Account` on((`Tag`.`accid` = `Account`.`accid`))) left join `Clients` on((`Requests`.`Client_ID` = `Clients`.`Client_ID`)))
+
+Tag,Requests,Account,Clients WHERE `Tag`.`Tag_ID` = `Requests`.`Tag_ID` AND `Tag`.`accid` = `Account`.`accid` AND `Requests`.`Client_ID` = `Clients`.`Client_ID`
+
+concat(lpad(`Tag`.`accid`,'3','0'),'-',lpad(`Tag`.`Tag_ID`,'3','0'))
+
+concat(`Agency`.`agcode`,`Tag`.`agtagnum`,substring(`Tag`.`Tag`,1,1) as `AgTag`
+
+
+            
+            $agQ = "SELECT agtagnum FROM Tag WHERE accid='".$accid."' AND Tag = '".$tag."' ORDER BY agtagnum DESC LIMIT 1";
+            $agR = mysqli_query($conn,$agQ);
+            $agRow = mysqli_fetch_assoc($agR);
+            $agnum = $agRow['agtagnum'];
+            $agnum ++;
+            
+            updAQ = "UPDATE Tag SET agtagnum = '".$agnum."' WHERE reqid='".$reqid."'";
+            insertData($updTQ);
+
+java.lang.reflect.InvocationTargetException

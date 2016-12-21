@@ -1,0 +1,394 @@
+body 
+{
+   background-color: #000000;
+   font-family: Arial;
+}
+
+body.editor
+{
+   background-color: #ECF0F1;
+   font-family: Arial;
+}
+
+a 
+{
+   text-decoration: none;
+}
+
+.hiddenContent
+{
+   display: none;
+}
+
+.visibleContent
+{
+   display: block;
+}
+   
+.image
+{
+   position: relative;
+   width: 100% /* IE 6 */
+}
+
+h2
+{
+   position: absolute; 
+   top: 90px; 
+   left: 0; 
+   width: 100%; 
+}
+
+h2 span 
+{ 
+   color: white; 
+   font: bold 24px/50px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+h2 span.spacer 
+{
+   padding:0 5px;
+}
+
+
+table.results
+{
+  border-collapse: collapse;
+  width: 100%
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  font-color: #000000;
+}
+
+
+thead.results, th.results
+{
+   background-color: #1ABC9C;
+   text-align:center;
+   padding:5px 0;
+}
+
+/*
+tr.results:nth-child(odd)
+{
+   background: #ECF0F1;
+}
+
+tr.results:nth-child(even)
+{
+   background: #FFFFFF;
+}
+*/
+
+table.results, th.results, td.results, tr.results
+{ 
+  border: 1px solid gray;
+}
+
+ 
+tbody.results tr.results:hover
+{
+   background:#BDC3C7;
+   color:#FFFFFF;
+}
+
+
+table.results .cid { width: 45px }
+table.results .an {width: 60px }
+table.results .cat { width: 95px }
+table.results .gd { width: 170px }
+table.results .pr { width: 45px }
+table.results .fn { width: 70px }
+table.results .mi { width: 25px }
+table.results .ln { width: 70px }
+table.results .su { width: 45px }
+table.results .dob { width: 80px }
+table.results .ph { width: 90px }
+table.results .tag { width: 60px }
+
+table.editor
+{
+  border-collapse: collapse;
+  width: 100%
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  font-color: #000000;
+}
+
+table.editor .ed1 
+{ 
+  width: 160px;
+  font-weight: bold;
+}
+
+table.editor .ed2
+{ 
+  width: 300px;
+  font-weight: bold;
+}
+
+table.editor .ed3
+{ 
+  width: 600px;
+  font-weight: bold;
+}
+
+tr.editor:hover
+{
+   background:#BDC3C7;
+   color:#FFFFFF; 
+}
+
+td.editor, tr.editor, table.editor
+{
+   border: 1px solid gray;
+}
+
+[type=text], [type=password]
+{
+ box-shadow:1px 1px 5px #333;
+ transition: 200ms all ease;
+ border:none;
+ padding: 5px 5px;  
+}
+
+[type=password]:hover, [type=text]:hover
+{
+ margin:-5px 0 0 -5px;
+ height:29px;
+ width:250px
+}
+
+div.scrollContainer
+{
+   position: relative;
+   /*padding-top: 1.7em;*/
+   border: 1px solid #000000;
+   width:  100%
+}
+
+div.scrollArea
+{
+   overflow: auto;
+   height: 800px;
+}
+
+button.btn, [type=submit].btn
+{
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  background: #0b631f;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+button.btn:hover, [type=submit].btn:hover 
+{
+  background: #158a3a;
+  text-decoration: none;
+}  
+
+@media print 
+{
+   #boxshadow, #topheader, body * 
+   {
+      visibility:hidden;
+   }
+   #printarea, #printarea * 
+   {
+      visibility:visible;
+   }
+   #printarea
+      {
+      position:absolute; 
+      width:100%; 
+      top:0; 
+      padding:0; 
+      margin-top:-600px;
+   }
+}
+/*
+.tooltip 
+{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; 
+}
+
+
+.tooltip .tooltiptext 
+{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+
+    position: absolute;
+     z-index: 1;
+}
+
+
+.tooltip:hover .tooltiptext 
+{
+    visibility: visible;
+}
+*/
+
+[type=password].passmismatch
+{
+   background-color: #ffe6e6
+}
+
+[type=password].passmatch
+{
+   background-color: #99ff99
+}
+
+div.charcounter
+{
+   font-size: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#menu 
+{
+   width: 1100px;
+   height: 35px;
+   font-size: 16px;
+   font-family: Tahoma, Geneva, sans-serif;
+   font-weight: bold;
+   text-align: center;
+   text-shadow: 3px 2px 3px #333333;
+   background-color: #490101;
+   border-radius: 8px;
+}
+
+#menu ul 
+{
+   height: auto;
+   padding: 8px 0px;
+   margin: 0px;
+}
+
+#menu li 
+{
+   display: inline;
+   padding: 90px;
+}
+
+#menu a 
+{
+   text-decoration: none;
+   color: #FFF;
+   padding: 8px 8px 8px 8px;
+}
+
+#menu a:hover 
+{
+   color: #F90;
+   background-color: #8B0303;
+}
+
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+    
+ position: relative;
+ background: #000;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #464545;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+#boxshadow {
+ position: relative;
+ box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+ padding: 10px;
+ background: white;
+}
+
+#boxshadow img {
+ width: 100%;
+ border: 1px solid #8a4419;
+ border-style: inset;
+}
+
+#boxshadow::after {
+ content: '';
+ position: absolute;
+ z-index: -1; /* hide shadow behind image */
+ box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+ width: 70%; 
+ left: 15%; /* one half of the remaining 30% */
+ height: 100px;
+ bottom: 0;
+} 
+
+.non-semantic-protector { position: relative; z-index: 1; }
+
